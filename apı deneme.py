@@ -19,10 +19,11 @@ df = pd.DataFrame(rsp['rates'].items(), columns=['currency_name', 'currency_rate
 
 df['currency_date'] = datetime.fromtimestamp(rsp['timestamp'])
 
-
 print(df)
-# API'den alınan döviz kurları pandas DataFrame'e aktarılır ve veri zaman bilgisi eklenir.
-# Kullanıcı 'currency_name' değişkenine istediği para birimini (örneğin "USD", "EUR", "TRY" vb.) girerek o birime ait kuru görüntüleyebilir.
+
+# Exchange rate data from the API is loaded into a pandas DataFrame, with the timestamp converted to datetime.
+# Users can enter any currency code in 'currency_name' (e.g., "USD", "EUR", "TRY") to display that currency's rate.
+#example
 #currency_name = "TRY"
 #filtered_df = df[df['currency_name']==currency_name]
 #print(filtered_df)
